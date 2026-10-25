@@ -1,0 +1,10 @@
+{"id": "chocolate-doom", "repo": "chocolate-doom/chocolate-doom", "game": "Doom / Heretic / Hexen / Strife", "license": "GPL-2.0",
+ "steps": ["cmake -S . -B build -G \"Visual Studio 17 2022\" -A x64 -DCMAKE_PREFIX_PATH=D:/rgbuild/deps/prefix -DENABLE_SDL2_NET=ON -DENABLE_SDL2_MIXER=ON",
+           "cmake --build build --config Release --parallel"],
+ "collect": [{"from": "build/src/Release", "glob": "*.exe"},
+             {"from": "D:/rgbuild/deps/prefix/bin", "glob": "SDL2*.dll"}, {"from": "D:/rgbuild/deps/prefix/bin", "glob": "*ogg*.dll"},
+             {"from": "D:/rgbuild/deps/prefix/bin", "glob": "*opus*.dll"}, {"from": "D:/rgbuild/deps/prefix/bin", "glob": "libxmp.dll"},
+             {"from": "D:/rgbuild/deps/prefix/bin", "glob": "libpng16.dll"}, {"from": "D:/rgbuild/deps/prefix/bin", "glob": "z.dll"}],
+ "licenses": ["COPYING.md", "README.md", "D:/rgbuild/deps/licencas/sdl2/*", "D:/rgbuild/deps/licencas/sdl2_mixer/*", "D:/rgbuild/deps/licencas/sdl2_net/*", "D:/rgbuild/deps/licencas/libpng/*", "D:/rgbuild/deps/licencas/zlib/*"],
+ "exe": "chocolate-doom.exe",
+ "needs": "o arquivo WAD do seu jogo (DOOM.WAD, DOOM2.WAD, HERETIC.WAD, HEXEN.WAD ou STRIFE1.WAD) na mesma pasta."}
