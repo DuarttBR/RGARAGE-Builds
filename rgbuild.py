@@ -5,6 +5,8 @@ publica a release no GitHub e apaga a cópia local.
   python rgbuild.py receitas/ioquake3.json            compila, publica e limpa
   python rgbuild.py receitas/ioquake3.json --keep     não apaga a pasta de trabalho (para depurar a receita)
   python rgbuild.py receitas/ioquake3.json --no-publish
+  python rgbuild.py receitas/ioquake3.json --reuse        usa a pasta de trabalho já compilada (pula clone e build)
+Caminhos absolutos em collect/licenses valem (ex.: DLLs e licenças de D:/rgbuild/deps, as dependências compiladas aqui).
 
 Receita (JSON):
   id, repo ("dono/nome"), ref (branch/tag, opcional), game, license, private (true = repositório privado),
@@ -59,7 +61,9 @@ def main():
     rid, private = r['id'], bool(r.get('private'))
     slug_repo, local_repo = REPOS[private]
     src = os.path.join(WORK, rid)
-    rmtree(src)
+    reuse = '--reuse' in sys.argv and os.path.isdir(os.path.join(src, '.git'))
+    if not reuse:
+        rmtree(src)
     os.makedirs(WORK, exist_ok=True); os.makedirs(OUT, exist_ok=True)
 
     # 1) código do autor
@@ -68,7 +72,8 @@ def main():
         clone += ['--branch', r['ref']]
     if r.get('submodules'):
         clone += ['--recurse-submodules', '--shallow-submodules']
-    run(clone + [f'https://github.com/{r["repo"]}.git', src])
+    if not reuse:
+        run(clone + [f'https://github.com/{r["repo"]}.git', src])
     sha = out(['git', 'rev-parse', 'HEAD'], cwd=src)
     date = datetime.date.today().strftime('%Y%m%d')
     tag = f'{rid}-{date}-{sha[:7]}'
@@ -76,7 +81,7 @@ def main():
     # 2) build com o ambiente do Visual Studio
     env = os.environ.copy()
     env.update(r.get('env', {}))
-    for step in r['steps']:
+    for step in ([] if reuse else r['steps']):
         run(f'call "{VCVARS}" >nul && {step}', cwd=src, env=env)
 
     # 3) pacote

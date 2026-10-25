@@ -1,0 +1,8 @@
+{"id": "openjk", "repo": "JACoders/OpenJK", "game": "Star Wars Jedi Knight: Jedi Academy", "license": "GPL-2.0",
+ "steps": ["cmake -S . -B build -G \"Visual Studio 17 2022\" -A x64 -DCMAKE_INSTALL_PREFIX=install",
+           "cmake --build build --config Release --parallel",
+           "cmake --install build --config Release"],
+ "collect": [{"from": "install/JediAcademy", "glob": "*"}],
+ "licenses": ["LICENSE.txt", "README.md", "rv-readme.txt", "lib/SDL2/*.txt"],
+ "exe": "openjk_sp.x86_64.exe",
+ "needs": "os arquivos do Jedi Academy (a pasta base com assets0.pk3 a assets3.pk3). Copie o conteúdo deste pacote para a pasta GameData do jogo."}

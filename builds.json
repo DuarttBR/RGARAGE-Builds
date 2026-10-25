@@ -12,6 +12,19 @@
    "exe": "ioquake3.exe",
    "needs": "os arquivos do Quake III Arena (pak0.pk3 a pak8.pk3 na pasta baseq3).",
    "date": "20261024"
+  },
+  {
+   "id": "openjk",
+   "repo": "JACoders/OpenJK",
+   "game": "Star Wars Jedi Knight: Jedi Academy",
+   "tag": "openjk-20261024-260c59c",
+   "sha": "260c59c2907187af555a676fe0cc798893bf7757",
+   "asset": "openjk-win64.zip",
+   "size": 7842832,
+   "license": "GPL-2.0",
+   "exe": "openjk_sp.x86_64.exe",
+   "needs": "os arquivos do Jedi Academy (a pasta base com assets0.pk3 a assets3.pk3). Copie o conteúdo deste pacote para a pasta GameData do jogo.",
+   "date": "20261024"
   }
  ]
 }
