@@ -1,0 +1,7 @@
+{"id": "bloodborne-pc", "repo": "Supermedo/bloodborne_pc", "game": "Bloodborne", "license": "GPL-2.0", "submodules": true, "shell": "msys2", "vcruntime": false,
+ "env": {"WINPYTHON": "C:/Users/mrbru/AppData/Local/Python/pythoncore-3.14-64/python.exe"},
+ "steps": ["bash build.sh", "bash packaging/windows/package.sh --zip-only"],
+ "collect": [{"from": "out/stage/bbport-windows", "glob": "*"}, {"from": "dist", "glob": "fsr4vk-*-src.zip", "to": "LICENCAS"}],
+ "licenses": ["LICENSE*", "README.md", "packaging/windows/licenses/*"],
+ "exe": "Bloodborne.exe",
+ "needs": "o seu dump do Bloodborne (CUSA03173) descriptografado; os patches da comunidade pedem a versão 1.09. Na primeira vez, aponte para a pasta do jogo no launcher."}

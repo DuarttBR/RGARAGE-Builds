@@ -27,6 +27,19 @@
    "date": "20261024"
   },
   {
+   "id": "bloodborne-pc",
+   "repo": "Supermedo/bloodborne_pc",
+   "game": "Bloodborne",
+   "tag": "bloodborne-pc-20261025-5adea35",
+   "sha": "5adea35dbd38851339b63773c1245c02a314f094",
+   "asset": "bloodborne-pc-win64.zip",
+   "size": 203259408,
+   "license": "GPL-2.0",
+   "exe": "Bloodborne.exe",
+   "needs": "o seu dump do Bloodborne (CUSA03173) descriptografado; os patches da comunidade pedem a versão 1.09. Na primeira vez, aponte para a pasta do jogo no launcher.",
+   "date": "20261025"
+  },
+  {
    "id": "chocolate-doom",
    "repo": "chocolate-doom/chocolate-doom",
    "game": "Doom / Heretic / Hexen / Strife",

@@ -12,7 +12,9 @@ Receita (JSON):
   id, repo ("dono/nome"), ref (branch/tag, opcional), game, license, private (true = repositório privado),
   submodules (bool), steps ([comandos no cmd, com o ambiente do Visual Studio x64]),
   collect ([{"from": "pasta", "glob": "*.exe", "to": "subpasta opcional"}]), licenses (arquivos do projeto a incluir),
-  needs (texto: o que o jogador precisa, ex. arquivos do jogo), exe (executável principal dentro do pacote)
+  needs (texto: o que o jogador precisa, ex. arquivos do jogo), exe (executável principal dentro do pacote),
+  shell ("msys2" = passos no MSYS2 CLANG64 em vez do ambiente do Visual Studio), vcruntime (false = não copiar a runtime do VC++),
+  crt ("x86" para builds de 32 bits), env (variáveis extras para os passos)
 """
 import datetime
 import glob
@@ -28,6 +30,8 @@ ROOT = os.path.dirname(os.path.abspath(__file__))
 WORK = r'D:\rgbuild\work'
 OUT = r'D:\rgbuild\out'
 VCVARS = r'C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Auxiliary\Build\vcvars64.bat'
+MSYS2_ENV = r'C:\msys64\usr\bin\env.exe'
+MSYS2_BASH = r'C:\msys64\usr\bin\bash.exe'
 # arquivos de compilação que não vão para o pacote
 SKIP = {'.exp', '.lib', '.pdb', '.ilk', '.iobj', '.ipdb', '.obj', '.tlog', '.lastbuildstate', '.recipe'}
 REPOS = {False: ('DuarttBR/RGARAGE-Builds', r'D:\rgbuild\repos\RGARAGE-Builds'),
@@ -82,7 +86,11 @@ def main():
     env = os.environ.copy()
     env.update(r.get('env', {}))
     for step in ([] if reuse else r['steps']):
-        run(f'call "{VCVARS}" >nul && {step}', cwd=src, env=env)
+        if r.get('shell') == 'msys2':
+            # ports que só compilam com Clang/MinGW (ex.: os de PS4 baseados no bbport): MSYS2 CLANG64
+            run([MSYS2_ENV, 'MSYSTEM=CLANG64', 'CHERE_INVOKING=1', MSYS2_BASH, '-lc', step], cwd=src, env=env)
+        else:
+            run(f'call "{VCVARS}" >nul && {step}', cwd=src, env=env)
 
     # 3) pacote
     stage = os.path.join(OUT, rid)
