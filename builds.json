@@ -118,6 +118,19 @@
    "date": "20261024"
   },
   {
+   "id": "opence",
+   "repo": "OpenCommunityEdition/OpenCE",
+   "game": "Halo: Combat Evolved",
+   "tag": "opence-20261025-7fb941b",
+   "sha": "7fb941b0b205edb1f7ecbb0aa6c2d7f5b884732d",
+   "asset": "opence-win64.zip",
+   "size": 14650163,
+   "license": "AGPL-3.0",
+   "exe": "halo.exe",
+   "needs": "a imagem de disco do seu Halo: Combat Evolved de Xbox (.iso ou .xiso). Na primeira vez, o jogo pede o arquivo e extrai os mapas.",
+   "date": "20261025"
+  },
+  {
    "id": "openjk",
    "repo": "JACoders/OpenJK",
    "game": "Star Wars Jedi Knight: Jedi Academy",

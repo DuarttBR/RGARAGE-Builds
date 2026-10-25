@@ -1,0 +1,33 @@
+{
+ "id": "opence",
+ "repo": "OpenCommunityEdition/OpenCE",
+ "game": "Halo: Combat Evolved",
+ "license": "AGPL-3.0",
+ "vcvars": "vcvars32.bat",
+ "crt": "x86",
+ "steps": [
+  "python configure.py --release --portable",
+  "ninja windows"
+ ],
+ "collect": [
+  {
+   "from": "build/windows",
+   "glob": "halo.exe"
+  },
+  {
+   "from": "build/windows",
+   "glob": "*.dll"
+  }
+ ],
+ "licenses": [
+  "LICENSE*",
+  "AUTHORS.md",
+  "README.md",
+  "LICENSES"
+ ],
+ "exe": "halo.exe",
+ "needs": "a imagem de disco do seu Halo: Combat Evolved de Xbox (.iso ou .xiso). Na primeira vez, o jogo pede o arquivo e extrai os mapas.",
+ "path": [
+  "%USERPROFILE%/scoop/apps/llvm/current/bin"
+ ]
+}

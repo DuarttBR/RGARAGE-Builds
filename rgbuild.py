@@ -40,7 +40,7 @@ REPOS = {False: ('DuarttBR/RGARAGE-Builds', r'D:\rgbuild\repos\RGARAGE-Builds'),
 
 def run(cmd, cwd=None, env=None, check=True):
     print('$', cmd if isinstance(cmd, str) else ' '.join(cmd), flush=True)
-    p = subprocess.run(cmd, cwd=cwd, env=env, shell=isinstance(cmd, str))
+    p = subprocess.run(cmd, cwd=cwd, env=env, shell=isinstance(cmd, str), stdin=subprocess.DEVNULL)
     if check and p.returncode != 0:
         raise SystemExit(f'falhou ({p.returncode}): {cmd}')
     return p.returncode
@@ -85,12 +85,15 @@ def main():
     # 2) build com o ambiente do Visual Studio
     env = os.environ.copy()
     env.update(r.get('env', {}))
+    if r.get('path'):   # pastas extras no começo do PATH (ex.: o bin do LLVM)
+        env['PATH'] = os.pathsep.join(os.path.expandvars(p) for p in r['path']) + os.pathsep + env.get('PATH', '')
     for step in ([] if reuse else r['steps']):
         if r.get('shell') == 'msys2':
             # ports que só compilam com Clang/MinGW (ex.: os de PS4 baseados no bbport): MSYS2 CLANG64
             run([MSYS2_ENV, 'MSYSTEM=CLANG64', 'CHERE_INVOKING=1', MSYS2_BASH, '-lc', step], cwd=src, env=env)
         else:
-            run(f'call "{VCVARS}" >nul && {step}', cwd=src, env=env)
+            vc = os.path.join(os.path.dirname(VCVARS), r.get('vcvars', 'vcvars64.bat'))   # vcvars32.bat para builds de 32 bits
+            run(f'call "{vc}" >nul && {step}', cwd=src, env=env)
 
     # 3) pacote
     stage = os.path.join(OUT, rid)
@@ -123,7 +126,10 @@ def main():
     os.makedirs(lic_dir, exist_ok=True)
     for lf in r.get('licenses', []):
         for f in glob.glob(os.path.join(src, lf)):
-            shutil.copy2(f, lic_dir)
+            if os.path.isdir(f):
+                shutil.copytree(f, os.path.join(lic_dir, os.path.basename(f)), dirs_exist_ok=True)
+            else:
+                shutil.copy2(f, lic_dir)
     credits = f"""{r['game']} — build para Windows feito pelo RGARAGE HUB (não oficial)
 
 Projeto original: https://github.com/{r['repo']}
