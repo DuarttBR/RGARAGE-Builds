@@ -25,6 +25,19 @@
    "exe": "openjk_sp.x86_64.exe",
    "needs": "os arquivos do Jedi Academy (a pasta base com assets0.pk3 a assets3.pk3). Copie o conteúdo deste pacote para a pasta GameData do jogo.",
    "date": "20261024"
+  },
+  {
+   "id": "yquake2",
+   "repo": "yquake2/yquake2",
+   "game": "Quake II",
+   "tag": "yquake2-20261024-9dbf699",
+   "sha": "9dbf699273e2546f3ad14cff3dee6a51a518cd2a",
+   "asset": "yquake2-win64.zip",
+   "size": 2391503,
+   "license": "GPL-2.0",
+   "exe": "yquake2.exe",
+   "needs": "os arquivos do Quake II (pak0.pak, pak1.pak e pak2.pak na pasta baseq2).",
+   "date": "20261024"
   }
  ]
 }

@@ -1,0 +1,7 @@
+{"id": "yquake2", "repo": "yquake2/yquake2", "game": "Quake II", "license": "GPL-2.0",
+ "steps": ["cmake -S . -B build -G \"Visual Studio 17 2022\" -A x64 -DCMAKE_PREFIX_PATH=D:/rgbuild/deps/prefix -DOPENAL_SUPPORT=OFF -DCURL_SUPPORT=OFF -DXDG_SUPPORT=OFF",
+           "cmake --build build --config Release --parallel"],
+ "collect": [{"from": "build/release/Release", "glob": "*"}, {"from": "D:/rgbuild/deps/prefix/bin", "glob": "SDL3.dll"}],
+ "licenses": ["LICENSE", "README.md", "D:/rgbuild/deps/licencas/sdl3/*"],
+ "exe": "yquake2.exe",
+ "needs": "os arquivos do Quake II (pak0.pak, pak1.pak e pak2.pak na pasta baseq2)."}
