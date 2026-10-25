@@ -1,0 +1,38 @@
+{
+ "id": "spacecadetpinball",
+ "repo": "k4zmu2a/SpaceCadetPinball",
+ "game": "3D Pinball for Windows: Space Cadet",
+ "license": "MIT",
+ "steps": [
+  "cmake -S . -B build -G \"Visual Studio 17 2022\" -A x64 -DCMAKE_PREFIX_PATH=D:/rgbuild/deps/prefix -DSDL2_DIR=D:/rgbuild/deps/prefix/cmake -DSDL2_mixer_DIR=D:/rgbuild/deps/prefix/cmake",
+  "cmake -E copy D:/rgbuild/deps/prefix/bin/SDL2.dll D:/rgbuild/deps/prefix/bin/SDL2_mixer.dll D:/rgbuild/deps/prefix/lib/",
+  "cmake --build build --config Release --parallel"
+ ],
+ "collect": [
+  {
+   "from": "bin/Release",
+   "glob": "*.exe"
+  },
+  {
+   "from": "build/Release",
+   "glob": "*.exe"
+  },
+  {
+   "from": "D:/rgbuild/deps/prefix/bin",
+   "glob": "SDL2.dll"
+  },
+  {
+   "from": "D:/rgbuild/deps/prefix/bin",
+   "glob": "SDL2_mixer.dll"
+  }
+ ],
+ "licenses": [
+  "LICENSE*",
+  "README.md",
+  "D:/rgbuild/deps/licencas/sdl2/SDL2-*",
+  "D:/rgbuild/deps/licencas/sdl2_mixer/SDL2_MIXER-LICENSE.txt",
+  "D:/rgbuild/deps/licencas/sdl2_mixer/SDL2_MIXER-ORIGEM.txt"
+ ],
+ "exe": "SpaceCadetPinball.exe",
+ "needs": "os arquivos do 3D Pinball original do Windows XP (PINBALL.DAT, os .WAV e o PINBALL.MID) na mesma pasta, ou os do Full Tilt! Pinball (pasta CADET)."
+}

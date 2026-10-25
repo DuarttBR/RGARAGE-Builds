@@ -66,6 +66,19 @@
    "date": "20261024"
   },
   {
+   "id": "spacecadetpinball",
+   "repo": "k4zmu2a/SpaceCadetPinball",
+   "game": "3D Pinball for Windows: Space Cadet",
+   "tag": "spacecadetpinball-20261024-cb9b7b8",
+   "sha": "cb9b7b886244a27773f66b0b19fdc2998392565e",
+   "asset": "spacecadetpinball-win64.zip",
+   "size": 1948280,
+   "license": "MIT",
+   "exe": "SpaceCadetPinball.exe",
+   "needs": "os arquivos do 3D Pinball original do Windows XP (PINBALL.DAT, os .WAV e o PINBALL.MID) na mesma pasta, ou os do Full Tilt! Pinball (pasta CADET).",
+   "date": "20261024"
+  },
+  {
    "id": "yquake2",
    "repo": "yquake2/yquake2",
    "game": "Quake II",
