@@ -79,6 +79,19 @@
    "date": "20261024"
   },
   {
+   "id": "openrct2",
+   "repo": "OpenRCT2/OpenRCT2",
+   "game": "RollerCoaster Tycoon 2",
+   "tag": "openrct2-20261025-47163da",
+   "sha": "47163dabbb7a13d1bf11e6c24e735c3d59201208",
+   "asset": "openrct2-win64.zip",
+   "size": 81043897,
+   "license": "GPL-3.0",
+   "exe": "openrct2.exe",
+   "needs": "os arquivos do RollerCoaster Tycoon 2 ou do RollerCoaster Tycoon Classic (Steam ou GOG). Na primeira vez, aponte para a pasta do jogo.",
+   "date": "20261025"
+  },
+  {
    "id": "spacecadetpinball",
    "repo": "k4zmu2a/SpaceCadetPinball",
    "game": "3D Pinball for Windows: Space Cadet",

@@ -1,0 +1,30 @@
+{
+ "id": "openrct2",
+ "repo": "OpenRCT2/OpenRCT2",
+ "game": "RollerCoaster Tycoon 2",
+ "license": "GPL-3.0",
+ "steps": [
+  "msbuild openrct2.proj /t:build /p:platform=x64 /p:configuration=Release /m /v:minimal"
+ ],
+ "collect": [
+  {
+   "from": "bin",
+   "glob": "openrct2.exe"
+  },
+  {
+   "from": "bin",
+   "glob": "openrct2-cli.exe"
+  },
+  {
+   "from": "bin",
+   "glob": "data"
+  }
+ ],
+ "licenses": [
+  "licence.txt",
+  "contributors.md",
+  "readme.md"
+ ],
+ "exe": "openrct2.exe",
+ "needs": "os arquivos do RollerCoaster Tycoon 2 ou do RollerCoaster Tycoon Classic (Steam ou GOG). Na primeira vez, aponte para a pasta do jogo."
+}

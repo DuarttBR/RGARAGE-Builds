@@ -1,0 +1,6 @@
+{"id": "openlara", "repo": "XProger/OpenLara", "game": "Tomb Raider", "license": "BSD-2-Clause",
+ "steps": ["msbuild src/platform/win/OpenLara.sln /p:Configuration=Release /p:Platform=x64 /m /v:minimal"],
+ "collect": [{"from": "bin", "glob": "*.exe"}, {"from": "src/platform/win/x64/Release", "glob": "*.exe"}, {"from": "src/platform/win/Release", "glob": "*.exe"}],
+ "licenses": ["LICENSE*", "README.md"],
+ "exe": "OpenLara.exe",
+ "needs": "os arquivos do Tomb Raider original (PC/PSX), como as pastas DATA e AUDIO, na mesma pasta do exe."}

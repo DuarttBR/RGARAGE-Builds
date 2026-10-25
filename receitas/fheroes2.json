@@ -1,0 +1,9 @@
+{"id": "fheroes2", "repo": "ihhub/fheroes2", "game": "Heroes of Might and Magic II", "license": "GPL-2.0",
+ "steps": ["cmake -S . -B build -G \"Visual Studio 17 2022\" -A x64 -DCMAKE_PREFIX_PATH=D:/rgbuild/deps/prefix -DCMAKE_POLICY_VERSION_MINIMUM=3.5",
+           "cmake --build build --config Release --parallel"],
+ "collect": [{"from": "build/Release", "glob": "*.exe"}, {"from": "files", "glob": "*", "to": "files"},
+             {"from": "D:/rgbuild/deps/prefix/bin", "glob": "SDL2.dll"}, {"from": "D:/rgbuild/deps/prefix/bin", "glob": "SDL2_mixer.dll"},
+             {"from": "D:/rgbuild/deps/prefix/bin", "glob": "z.dll"}, {"from": "D:/rgbuild/deps/prefix/bin", "glob": "libpng16.dll"}],
+ "licenses": ["LICENSE*", "README.md", "D:/rgbuild/deps/licencas/sdl2/*", "D:/rgbuild/deps/licencas/sdl2_mixer/*", "D:/rgbuild/deps/licencas/zlib/*", "D:/rgbuild/deps/licencas/libpng/*"],
+ "exe": "fheroes2.exe",
+ "needs": "os arquivos do Heroes of Might and Magic II original (pastas DATA e MAPS, da GOG ou do CD)."}
