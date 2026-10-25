@@ -1,6 +1,32 @@
-{"id": "openlara", "repo": "XProger/OpenLara", "game": "Tomb Raider", "license": "BSD-2-Clause",
- "steps": ["msbuild src/platform/win/OpenLara.sln /p:Configuration=Release /p:Platform=x64 /m /v:minimal"],
- "collect": [{"from": "bin", "glob": "*.exe"}, {"from": "src/platform/win/x64/Release", "glob": "*.exe"}, {"from": "src/platform/win/Release", "glob": "*.exe"}],
- "licenses": ["LICENSE*", "README.md"],
+{
+ "id": "openlara",
+ "repo": "XProger/OpenLara",
+ "game": "Tomb Raider",
+ "license": "BSD-2-Clause",
+ "steps": [
+  "python -c \"p='src/platform/win/OpenLara.vcxproj';s=open(p,encoding='utf-8-sig').read();s=s.replace('wcrt.lib;','legacy_stdio_definitions.lib;').replace('<IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>','<IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>');open(p,'w',encoding='utf-8').write(s)\"",
+  "msbuild src/platform/win/OpenLara.sln /p:Configuration=Release /p:Platform=Win32 /p:PlatformToolset=v143 /p:WindowsTargetPlatformVersion=10.0 /m /v:minimal"
+ ],
+ "collect": [
+  {
+   "from": "bin",
+   "glob": "*.exe"
+  },
+  {
+   "from": "src/platform/win/x64/Release",
+   "glob": "*.exe"
+  },
+  {
+   "from": "src/platform/win/Release",
+   "glob": "*.exe"
+  }
+ ],
+ "licenses": [
+  "LICENSE*",
+  "README.md"
+ ],
  "exe": "OpenLara.exe",
- "needs": "os arquivos do Tomb Raider original (PC/PSX), como as pastas DATA e AUDIO, na mesma pasta do exe."}
+ "needs": "os arquivos do Tomb Raider original (PC/PSX), como as pastas DATA e AUDIO, na mesma pasta do exe.",
+ "vcruntime": false,
+ "notas": "32 bits (o projeto do autor só tem Win32), runtime do VC++ estático; o link usa a CRT padrão do VS 2022 no lugar da wcrt.lib do autor (só o link, nada do jogo muda)."
+}

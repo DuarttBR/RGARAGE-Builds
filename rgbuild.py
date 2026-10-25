@@ -106,7 +106,7 @@ def main():
         raise SystemExit('nenhum arquivo coletado: confira "collect" na receita')
     # runtime do Visual C++ junto do exe (redistribuível da Microsoft; evita pedir o instalador do VC++ ao jogador)
     if r.get('vcruntime', True):
-        crt = sorted(glob.glob(os.path.join(os.path.dirname(VCVARS), '..', '..', 'Redist', 'MSVC', '14.*', 'x64', 'Microsoft.VC143.CRT')))
+        crt = sorted(glob.glob(os.path.join(os.path.dirname(VCVARS), '..', '..', 'Redist', 'MSVC', '14.*', r.get('crt', 'x64'), 'Microsoft.VC143.CRT')))
         exe_dir = os.path.dirname(os.path.join(stage, r.get('exe', ''))) if r.get('exe') else stage
         for dll in ('vcruntime140.dll', 'vcruntime140_1.dll', 'msvcp140.dll', 'msvcp140_1.dll', 'msvcp140_2.dll', 'concrt140.dll'):
             if crt and not os.path.exists(os.path.join(exe_dir, dll)) and os.path.exists(os.path.join(crt[-1], dll)):

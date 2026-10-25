@@ -92,6 +92,19 @@
    "date": "20261024"
   },
   {
+   "id": "openlara",
+   "repo": "XProger/OpenLara",
+   "game": "Tomb Raider",
+   "tag": "openlara-20261025-3b268ca",
+   "sha": "3b268ca4bf986c380f44a26ffd9218bf6d376249",
+   "asset": "openlara-win64.zip",
+   "size": 492849,
+   "license": "BSD-2-Clause",
+   "exe": "OpenLara.exe",
+   "needs": "os arquivos do Tomb Raider original (PC/PSX), como as pastas DATA e AUDIO, na mesma pasta do exe.",
+   "date": "20261025"
+  },
+  {
    "id": "openrct2",
    "repo": "OpenRCT2/OpenRCT2",
    "game": "RollerCoaster Tycoon 2",
