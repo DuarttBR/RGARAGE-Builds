@@ -1,0 +1,46 @@
+{
+ "id": "2ship2harkinian",
+ "repo": "HarbourMasters/2ship2harkinian",
+ "game": "The Legend of Zelda: Majora's Mask",
+ "license": "CC0-1.0",
+ "submodules": true,
+ "steps": [
+  "cmake -S . -B build/x64 -G \"Visual Studio 17 2022\" -T v143 -A x64",
+  "cmake --build build/x64 --config Release --target Generate2ShipOtr",
+  "cmake --build build/x64 --config Release --parallel",
+  "cmake --install build/x64 --config Release --prefix install"
+ ],
+ "collect": [
+  {
+   "from": "install",
+   "glob": "2ship.exe"
+  },
+  {
+   "from": "install",
+   "glob": "*.o2r"
+  },
+  {
+   "from": "install",
+   "glob": "assets"
+  },
+  {
+   "from": "install",
+   "glob": "gamecontrollerdb.txt"
+  },
+  {
+   "from": "install",
+   "glob": "mods"
+  },
+  {
+   "from": "install",
+   "glob": "readme.txt"
+  }
+ ],
+ "licenses": [
+  "LICENSE*",
+  "README.md",
+  "libultraship/LICENSE*"
+ ],
+ "exe": "2ship.exe",
+ "needs": "a ROM do Majora's Mask (N64 US) que você mesmo extraiu do seu cartucho. Na primeira vez o jogo pede a ROM e gera o mm.o2r."
+}

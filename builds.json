@@ -1,6 +1,19 @@
 {
  "builds": [
   {
+   "id": "2ship2harkinian",
+   "repo": "HarbourMasters/2ship2harkinian",
+   "game": "The Legend of Zelda: Majora's Mask",
+   "tag": "2ship2harkinian-20261025-b30a286",
+   "sha": "b30a286c55bd94f0868e6a103d0e4c511f7003a9",
+   "asset": "2ship2harkinian-win64.zip",
+   "size": 11272303,
+   "license": "CC0-1.0",
+   "exe": "2ship.exe",
+   "needs": "a ROM do Majora's Mask (N64 US) que você mesmo extraiu do seu cartucho. Na primeira vez o jogo pede a ROM e gera o mm.o2r.",
+   "date": "20261025"
+  },
+  {
    "id": "augustus",
    "repo": "Keriew/augustus",
    "game": "Caesar III",
