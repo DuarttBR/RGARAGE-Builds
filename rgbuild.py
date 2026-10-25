@@ -155,7 +155,12 @@ _English_: Windows build of [{r['repo']}](https://github.com/{r['repo']}) at `{s
 """
     nf = os.path.join(OUT, f'{rid}-notas.md')
     open(nf, 'w', encoding='utf-8').write(notes)
-    run(['gh', 'release', 'create', tag, '--repo', slug_repo, '--title', f"{r['game']} · {rid} ({sha[:7]})", '--notes-file', nf, asset, source])
+    if run(['gh', 'release', 'view', tag, '--repo', slug_repo, '--json', 'tagName'], check=False) == 0:
+        # mesmo commit no mesmo dia: atualiza os arquivos da release que já existe
+        run(['gh', 'release', 'upload', tag, '--repo', slug_repo, '--clobber', asset, source])
+        run(['gh', 'release', 'edit', tag, '--repo', slug_repo, '--notes-file', nf])
+    else:
+        run(['gh', 'release', 'create', tag, '--repo', slug_repo, '--title', f"{r['game']} · {rid} ({sha[:7]})", '--notes-file', nf, asset, source])
 
     # 5) receita e lista (o hub lê builds.json)
     rec_dest = os.path.join(local_repo, 'receitas', os.path.basename(rec_path))

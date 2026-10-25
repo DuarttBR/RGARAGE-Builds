@@ -20,7 +20,7 @@
    "tag": "ioquake3-20261024-87a99d1",
    "sha": "87a99d18206e878a20289f05ac3c16005dcae5c3",
    "asset": "ioquake3-win64.zip",
-   "size": 4120651,
+   "size": 4663475,
    "license": "GPL-2.0",
    "exe": "ioquake3.exe",
    "needs": "os arquivos do Quake III Arena (pak0.pk3 a pak8.pk3 na pasta baseq3).",
