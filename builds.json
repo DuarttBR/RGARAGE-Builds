@@ -27,6 +27,19 @@
    "date": "20261024"
   },
   {
+   "id": "julius",
+   "repo": "bvschaik/julius",
+   "game": "Caesar III",
+   "tag": "julius-20261024-34d1ecd",
+   "sha": "34d1ecd54befb845c0139b371fa8a0438210dac1",
+   "asset": "julius-win64.zip",
+   "size": 2675294,
+   "license": "AGPL-3.0",
+   "exe": "julius.exe",
+   "needs": "os arquivos do Caesar III original (versão em inglês da Steam ou GOG). Na primeira vez, aponte para a pasta do jogo.",
+   "date": "20261024"
+  },
+  {
    "id": "openjk",
    "repo": "JACoders/OpenJK",
    "game": "Star Wars Jedi Knight: Jedi Academy",

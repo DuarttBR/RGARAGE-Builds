@@ -1,0 +1,59 @@
+{
+ "id": "julius",
+ "repo": "bvschaik/julius",
+ "game": "Caesar III",
+ "license": "AGPL-3.0",
+ "steps": [
+  "cmake -S . -B build -G \"Visual Studio 17 2022\" -A x64 -DCMAKE_PREFIX_PATH=D:/rgbuild/deps/prefix -DSDL2_DIR=D:/rgbuild/deps/prefix/cmake",
+  "cmake --build build --config Release --parallel"
+ ],
+ "collect": [
+  {
+   "from": "build/Release",
+   "glob": "*.exe"
+  },
+  {
+   "from": "build/Release",
+   "glob": "*.dll"
+  },
+  {
+   "from": "D:/rgbuild/deps/prefix/bin",
+   "glob": "SDL2.dll"
+  },
+  {
+   "from": "D:/rgbuild/deps/prefix/bin",
+   "glob": "SDL2_mixer.dll"
+  },
+  {
+   "from": "D:/rgbuild/deps/prefix/bin",
+   "glob": "*ogg*.dll"
+  },
+  {
+   "from": "D:/rgbuild/deps/prefix/bin",
+   "glob": "*opus*.dll"
+  },
+  {
+   "from": "D:/rgbuild/deps/prefix/bin",
+   "glob": "libxmp.dll"
+  },
+  {
+   "from": "D:/rgbuild/deps/prefix/bin",
+   "glob": "libpng16.dll"
+  },
+  {
+   "from": "D:/rgbuild/deps/prefix/bin",
+   "glob": "z.dll"
+  }
+ ],
+ "licenses": [
+  "LICENSE*",
+  "COPYING*",
+  "README.md",
+  "D:/rgbuild/deps/licencas/sdl2/*",
+  "D:/rgbuild/deps/licencas/sdl2_mixer/*",
+  "D:/rgbuild/deps/licencas/libpng/*",
+  "D:/rgbuild/deps/licencas/zlib/*"
+ ],
+ "exe": "julius.exe",
+ "needs": "os arquivos do Caesar III original (versão em inglês da Steam ou GOG). Na primeira vez, aponte para a pasta do jogo."
+}
