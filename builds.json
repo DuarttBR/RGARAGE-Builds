@@ -170,6 +170,19 @@
    "date": "20261024"
   },
   {
+   "id": "uncharted-pc",
+   "repo": "Supermedo/uncharted_pc",
+   "game": "Uncharted: The Nathan Drake Collection",
+   "tag": "uncharted-pc-20261025-754ed2a",
+   "sha": "754ed2ab4f1fdd21250c8785d4d4f49517d31292",
+   "asset": "uncharted-pc-win64.zip",
+   "size": 79994633,
+   "license": "GPL-2.0",
+   "exe": "Uncharted.exe",
+   "needs": "o seu dump da Uncharted: The Nathan Drake Collection (PS4) descriptografado. Na primeira vez, aponte para a pasta do jogo no launcher.",
+   "date": "20261025"
+  },
+  {
    "id": "yquake2",
    "repo": "yquake2/yquake2",
    "game": "Quake II",
