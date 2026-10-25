@@ -1,0 +1,14 @@
+{
+ "id": "ioquake3",
+ "repo": "ioquake/ioq3",
+ "game": "Quake III Arena",
+ "license": "GPL-2.0",
+ "steps": [
+  "cmake -S . -B build -G \"Visual Studio 17 2022\" -A x64",
+  "cmake --build build --config Release --parallel"
+ ],
+ "collect": [{"from": "build/Release", "glob": "*"}],
+ "licenses": ["COPYING.txt", "README.md", "id-readme.txt"],
+ "exe": "ioquake3.exe",
+ "needs": "os arquivos do Quake III Arena (pak0.pk3 a pak8.pk3 na pasta baseq3)."
+}
