@@ -1,6 +1,19 @@
 {
  "builds": [
   {
+   "id": "augustus",
+   "repo": "Keriew/augustus",
+   "game": "Caesar III",
+   "tag": "augustus-20261024-dae1899",
+   "sha": "dae1899ef6abca7a19b73a99f65f6aa680a78173",
+   "asset": "augustus-win64.zip",
+   "size": 19833161,
+   "license": "AGPL-3.0",
+   "exe": "augustus.exe",
+   "needs": "os arquivos do Caesar III original (versão em inglês da Steam ou GOG). Na primeira vez, aponte para a pasta do jogo.",
+   "date": "20261024"
+  },
+  {
    "id": "chocolate-doom",
    "repo": "chocolate-doom/chocolate-doom",
    "game": "Doom / Heretic / Hexen / Strife",
