@@ -174,8 +174,9 @@ _English_: Windows build of [{r['repo']}](https://github.com/{r['repo']}) at `{s
     idx['builds'].sort(key=lambda b: b['id'])
     json.dump(idx, open(idx_path, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     run(['git', 'add', '-A'], cwd=local_repo)
-    run(['git', 'commit', '-q', '-m', f"{r['game']}: build {tag}\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"], cwd=local_repo)
-    run(['git', 'push', '-q', 'origin', 'main'], cwd=local_repo)
+    if out(['git', 'status', '--porcelain'], cwd=local_repo):
+        run(['git', 'commit', '-q', '-m', f"{r['game']}: build {tag}\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"], cwd=local_repo)
+        run(['git', 'push', '-q', 'origin', 'main'], cwd=local_repo)
 
     # 6) limpa o PC: o build fica só no GitHub
     if not keep:
