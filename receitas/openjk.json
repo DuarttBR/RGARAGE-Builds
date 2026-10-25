@@ -5,4 +5,5 @@
  "collect": [{"from": "install/JediAcademy", "glob": "*"}],
  "licenses": ["LICENSE.txt", "README.md", "rv-readme.txt", "lib/SDL2/*.txt"],
  "exe": "openjk_sp.x86_64.exe",
- "needs": "os arquivos do Jedi Academy (a pasta base com assets0.pk3 a assets3.pk3). Copie o conteúdo deste pacote para a pasta GameData do jogo."}
+ "needs": "os arquivos do Jedi Academy (a pasta base com assets0.pk3 a assets3.pk3). Copie o conteúdo deste pacote para a pasta GameData do jogo.",
+ "needsEn": "the Jedi Academy files (the base folder with assets0.pk3 to assets3.pk3). Copy this package's contents into the game's GameData folder."}

@@ -31,6 +31,7 @@
  ],
  "exe": "God of War III.exe",
  "needs": "o seu dump do God of War III Remastered (PS4) descriptografado. Na primeira vez, aponte para a pasta do jogo no launcher.",
+ "needsEn": "your own decrypted God of War III Remastered (PS4) dump. On first launch, point to the game folder in the launcher.",
  "ref": "windows-v2.7.0",
  "lf": true
 }

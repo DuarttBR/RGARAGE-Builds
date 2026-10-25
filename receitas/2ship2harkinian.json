@@ -42,5 +42,6 @@
   "libultraship/LICENSE*"
  ],
  "exe": "2ship.exe",
- "needs": "a ROM do Majora's Mask (N64 US) que você mesmo extraiu do seu cartucho. Na primeira vez o jogo pede a ROM e gera o mm.o2r."
+ "needs": "a ROM do Majora's Mask (N64 US) que você mesmo extraiu do seu cartucho. Na primeira vez o jogo pede a ROM e gera o mm.o2r.",
+ "needsEn": "a Majora's Mask ROM (N64 US) that you dumped from your own cartridge. On first launch the game asks for the ROM and generates mm.o2r."
 }

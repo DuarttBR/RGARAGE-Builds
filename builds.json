@@ -11,6 +11,7 @@
    "license": "CC0-1.0",
    "exe": "2ship.exe",
    "needs": "a ROM do Majora's Mask (N64 US) que você mesmo extraiu do seu cartucho. Na primeira vez o jogo pede a ROM e gera o mm.o2r.",
+   "needsEn": "a Majora's Mask ROM (N64 US) that you dumped from your own cartridge. On first launch the game asks for the ROM and generates mm.o2r.",
    "date": "20261025"
   },
   {
@@ -24,6 +25,7 @@
    "license": "AGPL-3.0",
    "exe": "augustus.exe",
    "needs": "os arquivos do Caesar III original (versão em inglês da Steam ou GOG). Na primeira vez, aponte para a pasta do jogo.",
+   "needsEn": "the original Caesar III files (English version from Steam or GOG). On first launch, point to the game folder.",
    "date": "20261024"
   },
   {
@@ -37,6 +39,7 @@
    "license": "GPL-2.0",
    "exe": "Bloodborne.exe",
    "needs": "o seu dump do Bloodborne (CUSA03173) descriptografado; os patches da comunidade pedem a versão 1.09. Na primeira vez, aponte para a pasta do jogo no launcher.",
+   "needsEn": "your own decrypted Bloodborne dump (CUSA03173); the community patches expect version 1.09. On first launch, point to the game folder in the launcher.",
    "date": "20261025"
   },
   {
@@ -50,6 +53,7 @@
    "license": "GPL-2.0",
    "exe": "chocolate-doom.exe",
    "needs": "o arquivo WAD do seu jogo (DOOM.WAD, DOOM2.WAD, HERETIC.WAD, HEXEN.WAD ou STRIFE1.WAD) na mesma pasta.",
+   "needsEn": "your game's WAD file (DOOM.WAD, DOOM2.WAD, HERETIC.WAD, HEXEN.WAD or STRIFE1.WAD) in the same folder.",
    "date": "20261024"
   },
   {
@@ -63,6 +67,7 @@
    "license": "CC0-1.0",
    "exe": "dusklight.exe",
    "needs": "o seu dump do Twilight Princess (GameCube, .iso ou .rvz). Na primeira vez, o jogo pede o arquivo (ou use --dvd caminho/do/jogo.iso).",
+   "needsEn": "your own Twilight Princess dump (GameCube, .iso or .rvz). On first launch the game asks for the file (or use --dvd path/to/game.iso).",
    "date": "20261025"
   },
   {
@@ -76,6 +81,7 @@
    "license": "GPL-2.0",
    "exe": "fheroes2.exe",
    "needs": "os arquivos do Heroes of Might and Magic II original (pastas DATA e MAPS, da GOG ou do CD).",
+   "needsEn": "the original Heroes of Might and Magic II files (DATA and MAPS folders, from GOG or the CD).",
    "date": "20261025"
   },
   {
@@ -89,6 +95,7 @@
    "license": "GPL-2.0",
    "exe": "God of War III.exe",
    "needs": "o seu dump do God of War III Remastered (PS4) descriptografado. Na primeira vez, aponte para a pasta do jogo no launcher.",
+   "needsEn": "your own decrypted God of War III Remastered (PS4) dump. On first launch, point to the game folder in the launcher.",
    "date": "20261025"
   },
   {
@@ -102,6 +109,7 @@
    "license": "GPL-2.0",
    "exe": "ioquake3.exe",
    "needs": "os arquivos do Quake III Arena (pak0.pk3 a pak8.pk3 na pasta baseq3).",
+   "needsEn": "the Quake III Arena files (pak0.pk3 to pak8.pk3 in the baseq3 folder).",
    "date": "20261024"
   },
   {
@@ -115,6 +123,7 @@
    "license": "AGPL-3.0",
    "exe": "julius.exe",
    "needs": "os arquivos do Caesar III original (versão em inglês da Steam ou GOG). Na primeira vez, aponte para a pasta do jogo.",
+   "needsEn": "the original Caesar III files (English version from Steam or GOG). On first launch, point to the game folder.",
    "date": "20261024"
   },
   {
@@ -128,6 +137,7 @@
    "license": "AGPL-3.0",
    "exe": "halo.exe",
    "needs": "a imagem de disco do seu Halo: Combat Evolved de Xbox (.iso ou .xiso). Na primeira vez, o jogo pede o arquivo e extrai os mapas.",
+   "needsEn": "the disc image of your Halo: Combat Evolved for Xbox (.iso or .xiso). On first launch the game asks for the file and extracts the maps.",
    "date": "20261025"
   },
   {
@@ -141,6 +151,7 @@
    "license": "GPL-2.0",
    "exe": "openjk_sp.x86_64.exe",
    "needs": "os arquivos do Jedi Academy (a pasta base com assets0.pk3 a assets3.pk3). Copie o conteúdo deste pacote para a pasta GameData do jogo.",
+   "needsEn": "the Jedi Academy files (the base folder with assets0.pk3 to assets3.pk3). Copy this package's contents into the game's GameData folder.",
    "date": "20261024"
   },
   {
@@ -154,6 +165,7 @@
    "license": "BSD-2-Clause",
    "exe": "OpenLara.exe",
    "needs": "os arquivos do Tomb Raider original (PC/PSX), como as pastas DATA e AUDIO, na mesma pasta do exe.",
+   "needsEn": "the original Tomb Raider files (PC/PSX), such as the DATA and AUDIO folders, in the exe's folder.",
    "date": "20261025"
   },
   {
@@ -167,6 +179,7 @@
    "license": "GPL-3.0",
    "exe": "openrct2.exe",
    "needs": "os arquivos do RollerCoaster Tycoon 2 ou do RollerCoaster Tycoon Classic (Steam ou GOG). Na primeira vez, aponte para a pasta do jogo.",
+   "needsEn": "the RollerCoaster Tycoon 2 or RollerCoaster Tycoon Classic files (Steam or GOG). On first launch, point to the game folder.",
    "date": "20261025"
   },
   {
@@ -180,6 +193,7 @@
    "license": "GPL-2.0",
    "exe": "SotC.exe",
    "needs": "o seu dump do Shadow of the Colossus (PS4) descriptografado. Na primeira vez, aponte para a pasta do jogo no launcher.",
+   "needsEn": "your own decrypted Shadow of the Colossus (PS4) dump. On first launch, point to the game folder in the launcher.",
    "date": "20261025"
   },
   {
@@ -193,6 +207,7 @@
    "license": "MIT",
    "exe": "SpaceCadetPinball.exe",
    "needs": "os arquivos do 3D Pinball original do Windows XP (PINBALL.DAT, os .WAV e o PINBALL.MID) na mesma pasta, ou os do Full Tilt! Pinball (pasta CADET).",
+   "needsEn": "the original Windows XP 3D Pinball files (PINBALL.DAT, the .WAV files and PINBALL.MID) in the same folder, or the Full Tilt! Pinball ones (CADET folder).",
    "date": "20261024"
   },
   {
@@ -206,6 +221,7 @@
    "license": "CC0-1.0",
    "exe": "Starship.exe",
    "needs": "a ROM do Star Fox 64 (US 1.1) que você mesmo extraiu do seu cartucho. Na primeira vez o jogo pede a ROM e gera o sf64.o2r.",
+   "needsEn": "a Star Fox 64 ROM (US 1.1) that you dumped from your own cartridge. On first launch the game asks for the ROM and generates sf64.o2r.",
    "date": "20261024"
   },
   {
@@ -219,6 +235,7 @@
    "license": "GPL-2.0",
    "exe": "Uncharted.exe",
    "needs": "o seu dump da Uncharted: The Nathan Drake Collection (PS4) descriptografado. Na primeira vez, aponte para a pasta do jogo no launcher.",
+   "needsEn": "your own decrypted Uncharted: The Nathan Drake Collection (PS4) dump. On first launch, point to the game folder in the launcher.",
    "date": "20261025"
   },
   {
@@ -232,6 +249,7 @@
    "license": "GPL-2.0",
    "exe": "yquake2.exe",
    "needs": "os arquivos do Quake II (pak0.pak, pak1.pak e pak2.pak na pasta baseq2).",
+   "needsEn": "the Quake II files (pak0.pak, pak1.pak and pak2.pak in the baseq2 folder).",
    "date": "20261024"
   }
  ]

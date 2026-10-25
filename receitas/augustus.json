@@ -50,5 +50,6 @@
   "D:/rgbuild/deps/licencas/sdl2_mixer/*"
  ],
  "exe": "augustus.exe",
- "needs": "os arquivos do Caesar III original (versão em inglês da Steam ou GOG). Na primeira vez, aponte para a pasta do jogo."
+ "needs": "os arquivos do Caesar III original (versão em inglês da Steam ou GOG). Na primeira vez, aponte para a pasta do jogo.",
+ "needsEn": "the original Caesar III files (English version from Steam or GOG). On first launch, point to the game folder."
 }

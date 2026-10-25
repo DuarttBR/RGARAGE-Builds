@@ -4,4 +4,5 @@
              {"from": "build/windows-msvc-relwithdebinfo", "glob": "res"}, {"from": "build/windows-msvc-relwithdebinfo", "glob": "assets"}],
  "licenses": ["LICENSE*", "README.md"],
  "exe": "dusklight.exe",
- "needs": "o seu dump do Twilight Princess (GameCube, .iso ou .rvz). Na primeira vez, o jogo pede o arquivo (ou use --dvd caminho/do/jogo.iso)."}
+ "needs": "o seu dump do Twilight Princess (GameCube, .iso ou .rvz). Na primeira vez, o jogo pede o arquivo (ou use --dvd caminho/do/jogo.iso).",
+ "needsEn": "your own Twilight Princess dump (GameCube, .iso or .rvz). On first launch the game asks for the file (or use --dvd path/to/game.iso)."}

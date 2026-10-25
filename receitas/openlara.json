@@ -27,6 +27,7 @@
  ],
  "exe": "OpenLara.exe",
  "needs": "os arquivos do Tomb Raider original (PC/PSX), como as pastas DATA e AUDIO, na mesma pasta do exe.",
+ "needsEn": "the original Tomb Raider files (PC/PSX), such as the DATA and AUDIO folders, in the exe's folder.",
  "vcruntime": false,
  "notas": "32 bits (o projeto do autor só tem Win32), runtime do VC++ estático; o link usa a CRT padrão do VS 2022 no lugar da wcrt.lib do autor (só o link, nada do jogo muda)."
 }

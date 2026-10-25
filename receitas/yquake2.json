@@ -4,4 +4,5 @@
  "collect": [{"from": "build/release/Release", "glob": "*"}, {"from": "D:/rgbuild/deps/prefix/bin", "glob": "SDL3.dll"}],
  "licenses": ["LICENSE", "README.md", "D:/rgbuild/deps/licencas/sdl3/*"],
  "exe": "yquake2.exe",
- "needs": "os arquivos do Quake II (pak0.pak, pak1.pak e pak2.pak na pasta baseq2)."}
+ "needs": "os arquivos do Quake II (pak0.pak, pak1.pak e pak2.pak na pasta baseq2).",
+ "needsEn": "the Quake II files (pak0.pak, pak1.pak and pak2.pak in the baseq2 folder)."}

@@ -6,4 +6,5 @@
              {"from": "D:/rgbuild/deps/prefix/bin", "glob": "z.dll"}, {"from": "D:/rgbuild/deps/prefix/bin", "glob": "libpng16.dll"}],
  "licenses": ["LICENSE*", "README.md", "D:/rgbuild/deps/licencas/sdl2/*", "D:/rgbuild/deps/licencas/sdl2_mixer/*", "D:/rgbuild/deps/licencas/zlib/*", "D:/rgbuild/deps/licencas/libpng/*"],
  "exe": "fheroes2.exe",
- "needs": "os arquivos do Heroes of Might and Magic II original (pastas DATA e MAPS, da GOG ou do CD)."}
+ "needs": "os arquivos do Heroes of Might and Magic II original (pastas DATA e MAPS, da GOG ou do CD).",
+ "needsEn": "the original Heroes of Might and Magic II files (DATA and MAPS folders, from GOG or the CD)."}

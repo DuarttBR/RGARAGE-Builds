@@ -4,4 +4,5 @@
  "collect": [{"from": "out/stage/bbport-windows", "glob": "*"}, {"from": "dist", "glob": "fsr4vk-*-src.zip", "to": "LICENCAS"}],
  "licenses": ["LICENSE*", "README.md", "packaging/windows/licenses/*"],
  "exe": "Bloodborne.exe",
- "needs": "o seu dump do Bloodborne (CUSA03173) descriptografado; os patches da comunidade pedem a versão 1.09. Na primeira vez, aponte para a pasta do jogo no launcher."}
+ "needs": "o seu dump do Bloodborne (CUSA03173) descriptografado; os patches da comunidade pedem a versão 1.09. Na primeira vez, aponte para a pasta do jogo no launcher.",
+ "needsEn": "your own decrypted Bloodborne dump (CUSA03173); the community patches expect version 1.09. On first launch, point to the game folder in the launcher."}

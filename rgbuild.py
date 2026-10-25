@@ -12,7 +12,7 @@ Receita (JSON):
   id, repo ("dono/nome"), ref (branch/tag, opcional), game, license, private (true = repositório privado),
   submodules (bool), steps ([comandos no cmd, com o ambiente do Visual Studio x64]),
   collect ([{"from": "pasta", "glob": "*.exe", "to": "subpasta opcional"}]), licenses (arquivos do projeto a incluir),
-  needs (texto: o que o jogador precisa, ex. arquivos do jogo), exe (executável principal dentro do pacote),
+  needs (texto: o que o jogador precisa, ex. arquivos do jogo), needsEn (o mesmo em inglês: o hub mostra fora do português), exe (executável principal dentro do pacote),
   shell ("msys2" = passos no MSYS2 CLANG64 em vez do ambiente do Visual Studio), vcruntime (false = não copiar a runtime do VC++),
   crt ("x86" para builds de 32 bits), env (variáveis extras para os passos)
 """
@@ -137,6 +137,7 @@ Autores: os contribuidores do projeto acima (todo o crédito é deles).
 Código usado: commit {sha} ({date[:4]}-{date[4:6]}-{date[6:]})
 Licença: {r.get('license') or 'veja a pasta LICENCAS'}
 {('O que você precisa: ' + r['needs']) if r.get('needs') else ''}
+{('What you need: ' + r['needsEn']) if r.get('needsEn') else ''}
 
 O código-fonte exato deste build está na release (fonte-{sha[:7]}.zip).
 Nenhum arquivo de jogo vem neste pacote.
@@ -162,6 +163,7 @@ Nenhum arquivo de jogo vem neste pacote.
 
 - Licença: {r.get('license') or 'veja LICENCAS'} · créditos e licença dentro do pacote; código-fonte exato em `fonte-{sha[:7]}.zip`.
 {('- O que você precisa: ' + r['needs']) if r.get('needs') else ''}
+{('- What you need: ' + r['needsEn']) if r.get('needsEn') else ''}
 - Build não oficial feito pelo [RGARAGE HUB](https://github.com/DuarttBR/RGARAGE-HUB-Releases). Nenhum arquivo de jogo vem junto.
 
 ---
@@ -184,7 +186,7 @@ _English_: Windows build of [{r['repo']}](https://github.com/{r['repo']}) at `{s
     idx = json.load(open(idx_path, encoding='utf-8'))
     idx['builds'] = [b for b in idx['builds'] if b['id'] != rid]
     idx['builds'].append({'id': rid, 'repo': r['repo'], 'game': r['game'], 'tag': tag, 'sha': sha, 'asset': os.path.basename(asset),
-                          'size': size, 'license': r.get('license', ''), 'exe': r.get('exe', ''), 'needs': r.get('needs', ''), 'date': date})
+                          'size': size, 'license': r.get('license', ''), 'exe': r.get('exe', ''), 'needs': r.get('needs', ''), 'needsEn': r.get('needsEn', ''), 'date': date})
     idx['builds'].sort(key=lambda b: b['id'])
     json.dump(idx, open(idx_path, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     run(['git', 'add', '-A'], cwd=local_repo)

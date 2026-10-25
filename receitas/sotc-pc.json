@@ -28,6 +28,7 @@
  ],
  "exe": "SotC.exe",
  "needs": "o seu dump do Shadow of the Colossus (PS4) descriptografado. Na primeira vez, aponte para a pasta do jogo no launcher.",
+ "needsEn": "your own decrypted Shadow of the Colossus (PS4) dump. On first launch, point to the game folder in the launcher.",
  "ref": "v0.60.6",
  "lf": true,
  "notas": "Build: as duas linhas de gravação de amostras GPA da AMD (profiling, VK_AMD_gpa_interface) saem porque os headers do Vulkan do MSYS2 ainda não têm essas funções; nada do jogo muda."

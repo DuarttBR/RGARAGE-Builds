@@ -27,6 +27,7 @@
  ],
  "exe": "halo.exe",
  "needs": "a imagem de disco do seu Halo: Combat Evolved de Xbox (.iso ou .xiso). Na primeira vez, o jogo pede o arquivo e extrai os mapas.",
+ "needsEn": "the disc image of your Halo: Combat Evolved for Xbox (.iso or .xiso). On first launch the game asks for the file and extracts the maps.",
  "path": [
   "%USERPROFILE%/scoop/apps/llvm/current/bin"
  ]

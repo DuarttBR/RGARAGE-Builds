@@ -26,5 +26,6 @@
   "readme.md"
  ],
  "exe": "openrct2.exe",
- "needs": "os arquivos do RollerCoaster Tycoon 2 ou do RollerCoaster Tycoon Classic (Steam ou GOG). Na primeira vez, aponte para a pasta do jogo."
+ "needs": "os arquivos do RollerCoaster Tycoon 2 ou do RollerCoaster Tycoon Classic (Steam ou GOG). Na primeira vez, aponte para a pasta do jogo.",
+ "needsEn": "the RollerCoaster Tycoon 2 or RollerCoaster Tycoon Classic files (Steam or GOG). On first launch, point to the game folder."
 }

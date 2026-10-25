@@ -34,5 +34,6 @@
   "D:/rgbuild/deps/licencas/sdl2_mixer/SDL2_MIXER-ORIGEM.txt"
  ],
  "exe": "SpaceCadetPinball.exe",
- "needs": "os arquivos do 3D Pinball original do Windows XP (PINBALL.DAT, os .WAV e o PINBALL.MID) na mesma pasta, ou os do Full Tilt! Pinball (pasta CADET)."
+ "needs": "os arquivos do 3D Pinball original do Windows XP (PINBALL.DAT, os .WAV e o PINBALL.MID) na mesma pasta, ou os do Full Tilt! Pinball (pasta CADET).",
+ "needsEn": "the original Windows XP 3D Pinball files (PINBALL.DAT, the .WAV files and PINBALL.MID) in the same folder, or the Full Tilt! Pinball ones (CADET folder)."
 }

@@ -10,5 +10,6 @@
  "collect": [{"from": "build/Release", "glob": "*"}],
  "licenses": ["COPYING.txt", "README.md", "id-readme.txt"],
  "exe": "ioquake3.exe",
- "needs": "os arquivos do Quake III Arena (pak0.pk3 a pak8.pk3 na pasta baseq3)."
+ "needs": "os arquivos do Quake III Arena (pak0.pk3 a pak8.pk3 na pasta baseq3).",
+ "needsEn": "the Quake III Arena files (pak0.pk3 to pak8.pk3 in the baseq3 folder)."
 }
