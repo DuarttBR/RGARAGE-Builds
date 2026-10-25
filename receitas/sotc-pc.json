@@ -12,6 +12,7 @@
  "steps": [
   "sed -i -E '/vkCmd[A-Za-z]*Gpa[A-Za-z]*AMD/d' gpu/shadps4/video_core/renderer_vulkan/vk_recorder_cmds.inc",
   "bash build.sh",
+  "D:/rgbuild/pyenv/Scripts/python.exe tools/make_button_icons.py --out glyphs/xbox",
   "bash packaging/windows/package_sotc.sh"
  ],
  "collect": [

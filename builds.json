@@ -144,6 +144,19 @@
    "date": "20261025"
   },
   {
+   "id": "sotc-pc",
+   "repo": "AjncSystem/ShadowOfTheColossus-PC",
+   "game": "Shadow of the Colossus",
+   "tag": "sotc-pc-20261025-40ec52a",
+   "sha": "40ec52a5a246bbaf20402520fe8fc9682f0a30c0",
+   "asset": "sotc-pc-win64.zip",
+   "size": 73908388,
+   "license": "GPL-2.0",
+   "exe": "SotC.exe",
+   "needs": "o seu dump do Shadow of the Colossus (PS4) descriptografado. Na primeira vez, aponte para a pasta do jogo no launcher.",
+   "date": "20261025"
+  },
+  {
    "id": "spacecadetpinball",
    "repo": "k4zmu2a/SpaceCadetPinball",
    "game": "3D Pinball for Windows: Space Cadet",
