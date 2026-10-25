@@ -1,0 +1,7 @@
+{"id": "dusklight", "repo": "TwilitRealm/dusklight", "game": "The Legend of Zelda: Twilight Princess", "license": "CC0-1.0", "submodules": true,
+ "steps": ["cmake --preset windows-msvc-relwithdebinfo", "cmake --build --preset windows-msvc-relwithdebinfo"],
+ "collect": [{"from": "build/windows-msvc-relwithdebinfo", "glob": "*.exe"}, {"from": "build/windows-msvc-relwithdebinfo", "glob": "*.dll"},
+             {"from": "build/windows-msvc-relwithdebinfo", "glob": "res"}, {"from": "build/windows-msvc-relwithdebinfo", "glob": "assets"}],
+ "licenses": ["LICENSE*", "README.md"],
+ "exe": "dusklight.exe",
+ "needs": "o seu dump do Twilight Princess (GameCube, .iso ou .rvz). Na primeira vez, o jogo pede o arquivo (ou use --dvd caminho/do/jogo.iso)."}

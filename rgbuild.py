@@ -116,7 +116,7 @@ def main():
     if r.get('vcruntime', True):
         crt = sorted(glob.glob(os.path.join(os.path.dirname(VCVARS), '..', '..', 'Redist', 'MSVC', '14.*', r.get('crt', 'x64'), 'Microsoft.VC143.CRT')))
         exe_dir = os.path.dirname(os.path.join(stage, r.get('exe', ''))) if r.get('exe') else stage
-        for dll in ('vcruntime140.dll', 'vcruntime140_1.dll', 'msvcp140.dll', 'msvcp140_1.dll', 'msvcp140_2.dll', 'concrt140.dll'):
+        for dll in ('vcruntime140.dll', 'vcruntime140_1.dll', 'msvcp140.dll', 'msvcp140_1.dll', 'msvcp140_2.dll', 'msvcp140_atomic_wait.dll', 'msvcp140_codecvt_ids.dll', 'concrt140.dll'):
             if crt and not os.path.exists(os.path.join(exe_dir, dll)) and os.path.exists(os.path.join(crt[-1], dll)):
                 shutil.copy2(os.path.join(crt[-1], dll), exe_dir)
     lic_dir = os.path.join(stage, 'LICENCAS')

@@ -53,6 +53,19 @@
    "date": "20261024"
   },
   {
+   "id": "dusklight",
+   "repo": "TwilitRealm/dusklight",
+   "game": "The Legend of Zelda: Twilight Princess",
+   "tag": "dusklight-20261025-77705f8",
+   "sha": "77705f8bb95ef7b7dca4675b149c4bcb6a48da34",
+   "asset": "dusklight-win64.zip",
+   "size": 46685721,
+   "license": "CC0-1.0",
+   "exe": "dusklight.exe",
+   "needs": "o seu dump do Twilight Princess (GameCube, .iso ou .rvz). Na primeira vez, o jogo pede o arquivo (ou use --dvd caminho/do/jogo.iso).",
+   "date": "20261025"
+  },
+  {
    "id": "fheroes2",
    "repo": "ihhub/fheroes2",
    "game": "Heroes of Might and Magic II",
