@@ -79,6 +79,19 @@
    "date": "20261024"
   },
   {
+   "id": "starship",
+   "repo": "HarbourMasters/Starship",
+   "game": "Star Fox 64",
+   "tag": "starship-20261024-3322643",
+   "sha": "3322643f0bbf80d2f8f7e1c0d2c4c578515f6c90",
+   "asset": "starship-win64.zip",
+   "size": 4944270,
+   "license": "CC0-1.0",
+   "exe": "Starship.exe",
+   "needs": "a ROM do Star Fox 64 (US 1.1) que você mesmo extraiu do seu cartucho. Na primeira vez o jogo pede a ROM e gera o sf64.o2r.",
+   "date": "20261024"
+  },
+  {
    "id": "yquake2",
    "repo": "yquake2/yquake2",
    "game": "Quake II",

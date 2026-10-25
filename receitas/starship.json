@@ -1,0 +1,29 @@
+{
+ "id": "starship",
+ "repo": "HarbourMasters/Starship",
+ "game": "Star Fox 64",
+ "license": "CC0-1.0",
+ "submodules": true,
+ "steps": [
+  "cmake -S . -B build/x64 -G \"Visual Studio 17 2022\" -T v143 -A x64",
+  "cmake --build build/x64 --config Release --parallel",
+  "cmake --build build/x64 --config Release --target GeneratePortO2R"
+ ],
+ "collect": [
+  {
+   "from": "build/x64/Release",
+   "glob": "*"
+  },
+  {
+   "from": ".",
+   "glob": "starship.o2r"
+  }
+ ],
+ "licenses": [
+  "LICENSE*",
+  "README.md",
+  "libultraship/LICENSE*"
+ ],
+ "exe": "Starship.exe",
+ "needs": "a ROM do Star Fox 64 (US 1.1) que você mesmo extraiu do seu cartucho. Na primeira vez o jogo pede a ROM e gera o sf64.o2r."
+}
