@@ -1,0 +1,33 @@
+{
+ "id": "sotc-pc",
+ "repo": "AjncSystem/ShadowOfTheColossus-PC",
+ "game": "Shadow of the Colossus",
+ "license": "GPL-2.0",
+ "submodules": true,
+ "shell": "msys2",
+ "vcruntime": false,
+ "env": {
+  "WINPYTHON": "D:/rgbuild/pyenv/Scripts/python.exe"
+ },
+ "steps": [
+  "sed -i -E '/vkCmd[A-Za-z]*Gpa[A-Za-z]*AMD/d' gpu/shadps4/video_core/renderer_vulkan/vk_recorder_cmds.inc",
+  "bash build.sh",
+  "bash packaging/windows/package_sotc.sh"
+ ],
+ "collect": [
+  {
+   "from": "out/stage/SotC-PC",
+   "glob": "*"
+  }
+ ],
+ "licenses": [
+  "LICENSE*",
+  "README.md",
+  "CHANGELOG.md"
+ ],
+ "exe": "SotC.exe",
+ "needs": "o seu dump do Shadow of the Colossus (PS4) descriptografado. Na primeira vez, aponte para a pasta do jogo no launcher.",
+ "ref": "v0.60.6",
+ "lf": true,
+ "notas": "Build: as duas linhas de gravação de amostras GPA da AMD (profiling, VK_AMD_gpa_interface) saem porque os headers do Vulkan do MSYS2 ainda não têm essas funções; nada do jogo muda."
+}

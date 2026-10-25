@@ -66,6 +66,19 @@
    "date": "20261025"
   },
   {
+   "id": "gow3-spartanport",
+   "repo": "FelipePrado0/SpartanPort",
+   "game": "God of War III Remastered",
+   "tag": "gow3-spartanport-20261025-003e42b",
+   "sha": "003e42b6e004ed686aae58c053d2301fe9c8c68e",
+   "asset": "gow3-spartanport-win64.zip",
+   "size": 81301756,
+   "license": "GPL-2.0",
+   "exe": "God of War III.exe",
+   "needs": "o seu dump do God of War III Remastered (PS4) descriptografado. Na primeira vez, aponte para a pasta do jogo no launcher.",
+   "date": "20261025"
+  },
+  {
    "id": "ioquake3",
    "repo": "ioquake/ioq3",
    "game": "Quake III Arena",

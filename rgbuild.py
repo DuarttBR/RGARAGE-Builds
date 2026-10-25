@@ -71,7 +71,7 @@ def main():
     os.makedirs(WORK, exist_ok=True); os.makedirs(OUT, exist_ok=True)
 
     # 1) código do autor
-    clone = ['git', 'clone', '--depth', '1']
+    clone = ['git'] + (['-c', 'core.autocrlf=false'] if r.get('lf') else []) + ['clone', '--depth', '1']   # lf: patches do autor exigem LF
     if r.get('ref'):
         clone += ['--branch', r['ref']]
     if r.get('submodules'):

@@ -1,0 +1,38 @@
+{
+ "id": "uncharted-pc",
+ "repo": "Supermedo/uncharted_pc",
+ "game": "Uncharted: The Nathan Drake Collection",
+ "license": "GPL-2.0",
+ "submodules": true,
+ "shell": "msys2",
+ "vcruntime": false,
+ "env": {
+  "WINPYTHON": "D:/rgbuild/pyenv/Scripts/python.exe"
+ },
+ "steps": [
+  "bash build.sh",
+  "D:/rgbuild/pyenv/Scripts/python.exe -c \"from PIL import Image, ImageDraw, ImageFont; im=Image.new('RGBA',(256,256),(18,22,26,255)); d=ImageDraw.Draw(im); f=ImageFont.truetype('C:/Windows/Fonts/segoeuib.ttf',120); d.text((128,128),'UC',font=f,fill=(230,190,90,255),anchor='mm'); im.save('launcher/uncharted.png'); im.save('launcher/uncharted.ico',sizes=[(16,16),(32,32),(48,48),(256,256)])\"",
+  "bash packaging/windows/package.sh --zip-only"
+ ],
+ "collect": [
+  {
+   "from": "out/stage/uncharted-windows",
+   "glob": "*"
+  },
+  {
+   "from": "dist",
+   "glob": "fsr4vk-*-src.zip",
+   "to": "LICENCAS"
+  }
+ ],
+ "licenses": [
+  "LICENSE*",
+  "README.md",
+  "packaging/windows/licenses/*"
+ ],
+ "exe": "Uncharted.exe",
+ "needs": "o seu dump da Uncharted: The Nathan Drake Collection (PS4) descriptografado. Na primeira vez, aponte para a pasta do jogo no launcher.",
+ "ref": "v0.3.9",
+ "lf": true,
+ "notas": "Build: o repositório não traz launcher/uncharted.ico e .png; o build gera um ícone simples (\"UC\") no lugar."
+}

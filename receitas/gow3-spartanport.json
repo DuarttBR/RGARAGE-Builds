@@ -1,0 +1,36 @@
+{
+ "id": "gow3-spartanport",
+ "repo": "FelipePrado0/SpartanPort",
+ "game": "God of War III Remastered",
+ "license": "GPL-2.0",
+ "submodules": true,
+ "shell": "msys2",
+ "vcruntime": false,
+ "env": {
+  "WINPYTHON": "D:/rgbuild/pyenv/Scripts/python.exe"
+ },
+ "steps": [
+  "bash build.sh",
+  "bash packaging/windows/package.sh"
+ ],
+ "collect": [
+  {
+   "from": "out/stage/spartanport-windows",
+   "glob": "*"
+  },
+  {
+   "from": "dist",
+   "glob": "fsr4vk-*-src.zip",
+   "to": "LICENCAS"
+  }
+ ],
+ "licenses": [
+  "LICENSE*",
+  "README.md",
+  "packaging/windows/licenses/*"
+ ],
+ "exe": "God of War III.exe",
+ "needs": "o seu dump do God of War III Remastered (PS4) descriptografado. Na primeira vez, aponte para a pasta do jogo no launcher.",
+ "ref": "windows-v2.7.0",
+ "lf": true
+}
